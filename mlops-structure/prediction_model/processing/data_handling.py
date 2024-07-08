@@ -1,6 +1,14 @@
 import os
 import pathlib
 import pandas as pd 
+from pathlib import Path
+import os
+import sys
+
+PACKAGE_ROOT = Path(os.path.abspath(os.path.dirname(__file__))).parent.parent
+sys.path.append(str(PACKAGE_ROOT))
+
+from prediction_model.config import config
 
 #function to load the data
 def load_dataset(file_name):
